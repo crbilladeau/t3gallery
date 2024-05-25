@@ -22,6 +22,10 @@ export function TopNav() {
           onClientUploadComplete={() => {
             router.refresh()
           }}
+          onUploadError={(error: Error) => {
+            // Do something with the error.
+            alert(`ERROR! ${error.message}`);
+          }}
           />
           <UserButton  />
         </SignedIn>

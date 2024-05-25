@@ -22,7 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-              <NextSSRPlugin
+    <html lang="en" className={`${GeistSans.variable}`}>
+      <NextSSRPlugin
           /**
            * The `extractRouterConfig` will extract **only** the route configs
            * from the router to prevent additional information from being
@@ -31,7 +32,6 @@ export default function RootLayout({
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-    <html lang="en" className={`${GeistSans.variable}`}>
       <body className={`flex flex-col gap-4`}>
         <TopNav />
         {children}
