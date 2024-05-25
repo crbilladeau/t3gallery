@@ -17,17 +17,17 @@ export function TopNav() {
           <SignInButton />
         </SignedOut>
         <SignedIn>
-          <UploadButton 
-          endpoint="imageUploader"
-          onClientUploadComplete={() => {
-            router.refresh()
-          }}
-          onUploadError={(error: Error) => {
-            // Do something with the error.
-            alert(`ERROR! ${error.message}`);
-          }}
+          <UploadButton
+            endpoint="imageUploader"
+            onClientUploadComplete={() => {
+              router.refresh()
+            }}
+            onUploadError={(error: Error) => {
+              // Do something with the error.
+              alert(`ERROR! ${error.message}`);
+            }}
           />
-          <UserButton  />
+          <UserButton />
         </SignedIn>
       </div>
     </nav>
